@@ -1,0 +1,22 @@
+.networthfull {
+    background-color: #171a1f;
+    display: flex;
+    width: 55%;
+    padding: 30px;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.topcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+.cardtitle {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    padding-top: 5px;
+    
+}

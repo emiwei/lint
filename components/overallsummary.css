@@ -1,0 +1,47 @@
+.summaryfull {
+    width: 370px;
+    height: 40%;
+    background-color: #171a1f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.topsummary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.summarytitle {
+    font-size: 25px;
+    color: white;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.accountamount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.allsummary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.category {
+    margin: 0;
+    color: white;
+    font-size: 30px;
+}
+
+.amount {
+    margin: 0;
+    color: green;
+    font-size: 30px;
+}
