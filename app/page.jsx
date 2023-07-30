@@ -1,8 +1,10 @@
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 
 const Home = () => {
   return (
-    <section>
+    <section className='w-full flex flex-col '>
+      <span className='pageheader'>net worth summary</span>
+      <span className='pagedescription'>all your holdings summarized into one page! hooray!</span>
     </section>
   )
 }

@@ -4,9 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Nav Component */
 .logo_text {
-    @apply max-sm:hidden font-poppins font-medium text-2xl text-white tracking-wide;
+    @apply max-sm:hidden font-poppins font-medium text-3xl text-white tracking-wide;
 }
 
 .flex-between {
@@ -19,4 +20,16 @@
 
 .signin_text {
     @apply font-poppins font-light text-sm text-white;
+}
+
+.username_display {
+    @apply font-poppins font-light text-lg text-white tracking-wide;
+}
+
+.pageheader {
+    @apply font-poppins font-medium text-3xl tracking-wide text-white;
+}
+
+.pagedescription {
+    @apply font-poppins font-light text-lg text-gray-300 pt-2;
 }

@@ -10,7 +10,6 @@ const Navbar = () => {
     const { data: session } = useSession();
 
     const [providers, setProviders] = useState(null);
-    const [toggleDropdown, setToggleDropdown] = useState(false);
 
     useEffect(() => {
         (async () => {
@@ -18,9 +17,9 @@ const Navbar = () => {
             setProviders(res);
         })();
     }, []);
-    
+
     return (
-        <div className="flex-between flex-row w-full mb-16 p-5 bg-gray-800">
+        <div className="flex-between flex-row w-full mb-6 p-4 bg-gray-800">
             <Link href='/' className='flex gap-2 flex-center'>
                 <Image
                     src='/images/lovely.png'
@@ -29,15 +28,44 @@ const Navbar = () => {
                     height={45}
                     className='object-contain'
                 />
-                <h1 className='logo_text pl-2'>emily's tracker</h1>
+                <div className='flex flex-col pl-2'>
+                    <span className='logo_text'>lint</span>
+                    {session?.user ? (
+                        <span className='username_display'>{session?.user.name.split(" ")[0].toLowerCase()}'s tracker</span>
+                    ) : (
+                         <>
+                         </>
+                    )}
+                </div>
+                
+
             </Link>
             <SearchBar></SearchBar>
-            <button
-                type='button'
-                className='bg-gray-700 rounded-md p-2'
+            {session?.user ? (
+                <button 
+                    type='button'
+                    className='bg-gray-700 rounded-md p-2'
+                    onClick={signOut}
                 >
-                <span className='signin_text'>sign in</span>
-            </button>
+                    <span className='signin_text'>sign out</span>
+                </button>
+            ) : (
+                <>
+                    {providers && 
+                        Object.values(providers).map((provider) => (
+                            <button
+                                type='button'
+                                key={provider.name}
+                                onClick={() => {
+                                    signIn(provider.id);
+                                }}
+                                className='bg-gray-700 rounded-md p-2'
+                            >
+                                <span className='signin_text'>sign in</span>
+                            </button>
+                        ))}  
+                </>
+            )}
         </div>
     )
 }
