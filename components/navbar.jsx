@@ -31,9 +31,13 @@ const Navbar = () => {
                 />
                 <h1 className='logo_text pl-2'>emily's tracker</h1>
             </Link>
-            <div>
-                <SearchBar></SearchBar>
-            </div>
+            <SearchBar></SearchBar>
+            <button
+                type='button'
+                className='bg-gray-700 rounded-md p-2'
+                >
+                <span className='signin_text'>sign in</span>
+            </button>
         </div>
     )
 }

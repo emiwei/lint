@@ -16,3 +16,7 @@
 .flex-center {
     @apply flex justify-center items-center;
 }
+
+.signin_text {
+    @apply font-poppins font-light text-sm text-white;
+}
