@@ -1,28 +1,25 @@
 import React from "react";
-import './overallsummary.css';
 
 function OverallSummary() {
     return (
-        <div className="summaryfull">
-            <div className="topsummary">
-                <h1 className="summarytitle">Summary</h1>
-            </div>
-            <div className="allsummary">
-                <div className="accountamount">
-                    <h1 className="category">Cash</h1>
-                    <h1 className="amount">$999</h1>
+        <div className="box flex-col w-full">
+            <span className='text-white pb-3 tracking-wide text-3xl'>account summary</span>
+            <div className="flex-between flex-col">
+                <div className="categories_row">
+                    <span className="category">Cash</span>
+                    <span className="amount">$999</span>
                 </div>
-                <div className="accountamount">
-                    <h1 className="category">Investments</h1>
-                    <h1 className="amount">$999</h1>
+                <div className="categories_row">
+                    <span className="category">Investments</span>
+                    <span className="amount">$999</span>
                 </div>
-                <div className="accountamount">
-                    <h1 className="category">Credit Cards</h1>
-                    <h1 className="amount">$999</h1>
+                <div className="categories_row">
+                    <span className="category">Credit Cards</span>
+                    <span className="amount">$999</span>
                 </div>
-                <div className="accountamount">
-                    <h1 className="category">Loans</h1>
-                    <h1 className="amount">$999</h1>
+                <div className="categories_row">
+                    <span className="category">Loans</span>
+                    <span className="amount">$999</span>
                 </div>
             </div>
         </div>

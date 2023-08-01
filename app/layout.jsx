@@ -13,13 +13,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
       <Provider>
-        <div className='h-screen bg-gray-700'>
-          <div className='flex flex-col'>
+        <div className='h-full bg-gray-700 pb-8'>
+          <div className='flex flex-col main'>
             <Navbar/>
-            <div className='pl-6 pr-6'>
+            <div className='pl-8 pr-8'>
               {children}
             </div>
-            
           </div>
         </div>
       </Provider>

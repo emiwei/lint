@@ -1,19 +1,22 @@
-import React, { useState } from "react";
-import './networth.css';
-import tempgraph from '../images/graphnetworth.png';
+"use client";
+import { useState } from "react";
+import NetworthGraph from "./NetworthGraph";
 import { MenuItem,  InputLabel, FormControl, Select } from "@mui/material";
 
 function NetWorth() {
     const [period, setPeriod] = useState("Month");
 
-    const handleChange = (e) => {
+    const handleChange = async (e) => {
         setPeriod(e.target.value);
     };
 
     return (
-        <div className="networthfull">
-            <div className="topcard">
-                <h1 className="cardtitle">Net Worth</h1>
+        <div className="box w-3/5 flex-col">
+            <div className="flex-row flex-between w-full mb-4">
+                <div className='flex flex-col'>
+                    <span className='text-white text-5xl'>$1000</span>
+                    <span className='text-gray-400 text-xl'>current</span>
+                </div>
                 <FormControl sx={{ m: 0, minWidth: 120}}>
                     <Select
                         labelId="demo-simple-select-helper-label"
@@ -45,7 +48,7 @@ function NetWorth() {
                     </Select>
                 </FormControl>
             </div>
-            <img src={tempgraph} alt="Graph"/>
+            <NetworthGraph/>
         </div>
     );
 }

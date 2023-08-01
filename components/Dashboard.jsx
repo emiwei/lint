@@ -1,11 +1,16 @@
-import React from 'react'
-import NetWorth from './networth';
-import OverallSummary from './overallsummary';
-import spendSummary from './spendsummary';
+import NetWorth from './Networth';
+import OverallSummary from './OverallSummary';
+import spendSummary from './SpendSummary';
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className='pt-5 flex-row flex-between w-full'>
+      <NetWorth/>
+      <div className='flex flex-col items-start'>
+        <OverallSummary/>
+        <OverallSummary/>
+      </div>
+    </div>
   )
 }
 

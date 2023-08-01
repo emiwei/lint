@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.main {
+    @apply font-poppins;
+}
 
 /* Nav Component */
 .logo_text {
@@ -32,4 +35,20 @@
 
 .pagedescription {
     @apply font-poppins font-light text-lg text-gray-300 pt-2;
+}
+
+.box {
+    @apply bg-gray-800 rounded-md p-6 h-fit flex;
+}
+
+.category {
+    @apply font-normal text-xl text-white;
+}
+
+.amount {
+    @apply font-normal text-xl text-green-700;
+}
+
+.categories_row {
+    @apply flex-between w-full flex-row pb-2;
 }
